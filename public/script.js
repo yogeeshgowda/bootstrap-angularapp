@@ -1,39 +1,12 @@
-var app = angular.module('myApp', []);
+'use strict';
+
+var app = angular.module('myApp', ['loginService']);
 app.controller('myCtrl', function($scope,$http) {
-    $scope.register = function() {
-        var payload = {      
-          unameR:$scope.unamer,
-          emailR:$scope.emailr,
-          pwdR:$scope.pwdr,
-          id:$scope.idr 
-        };       
 
-$http({
-  method: 'POST',
-  url: 'http://localhost:8086/Postuser',
-  data:payload,
-  headers:{'Content-Type': 'application/json'},
-}).then(function successCallback(response) {
-      console.log("Entered in successCallback ");
-      console.log(JSON.stringify(response.data));
-      console.log(response.status);
-      console.log(response.statusText);
-      console.log(response.statusText);
-      alert('Registered Sucessfully');
-
-  }, function errorCallback(response) {
-      console.log("Entered in errorCallback ");
-      console.log(response.xhrStatus);
-      console.log(response.status);
-      console.log(response.statusText);
-});   
-      };
-
-          $scope.login = function() {
+$scope.login = function() {
 $http({
   method: 'GET',
   url: 'http://localhost:8086/Getuser',
-
   headers:{'Content-Type': 'application/json'},
 }).then(function successCallback(response) {
       console.log("Entered in successCallback ");
@@ -43,13 +16,11 @@ $http({
       console.log(response.statusText);
       $scope.birdsapi = response.data;
       for (var i=0;i<($scope.birdsapi.Data).length;i++){
-
       if (($scope.uname == $scope.birdsapi.Data[i].unamer) && ($scope.pwd == $scope.birdsapi.Data[i].pwdr) ){
       alert('Logged in Sucessfully ');
     }
         
   }
-
   }, function errorCallback(response) {
       console.log("Entered in errorCallback ");
       console.log(response.xhrStatus);
@@ -57,6 +28,7 @@ $http({
       console.log(response.statusText);
 });   
       };
+      
 });
 
 

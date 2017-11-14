@@ -3,10 +3,10 @@
 <head>
   <title>Login Form</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script> -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
+  {{ anusha }}
 <div class=" logincss">
    <ul class="nav nav-tabs">
                   <li class="active"><a href="#login" data-toggle="tab"> Login </a></li>
@@ -37,22 +37,17 @@
                 <div class="input-group">
                   <span class="input-group-addon">
                  <i class="glyphicon glyphicon-user"></i></span>
-                 <input type="text" class="form-control" placeholder="Enter User name" ng-model ="unamer"  required>
+                 <input type="text" class="form-control" placeholder="Enter User name" ng-model ="unameR" id ="uname1" pattern="[a-z]{3}" required>
                 </div> <br>
                 <div class="input-group">
                   <span class="input-group-addon">
                  <i class="glyphicon glyphicon-envelope"></i></span>
-                 <input type="text" class="form-control" placeholder="Enter your Email Id"  ng-model ="emailr" id="email1" required>
+                 <input type="text" class="form-control" placeholder="Enter your Email Id"  ng-model ="emailR" id="email1" pattern="[a-z]{3}" required>
                 </div> <br>
                 <div class="input-group">
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-lock"></i></span>
-                  <input type ="password"  placeholder ="Enter Password" class="form-control"  ng-model ="pwdr" id="pwd1"  required>
-                </div> <br>
-                <div class="input-group">
-                  <span class="input-group-addon">
-                   <i class="glyphicon glyphicon-lock"></i></span>
-                  <input type ="text"  placeholder ="Enter id" class="form-control"  ng-model ="idr" id="pwd1"   required>
+                  <input type ="password"  placeholder ="Enter Password" class="form-control"  ng-model ="pwdR" id="pwd1"  pattern="[a-z]{3}" required>
                 </div> <br>
                  <button type="submit" class="btn btn-primary pull-right" ng-click="register()">Register</button>
               </div>
