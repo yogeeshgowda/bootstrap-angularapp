@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-  {{ anusha }}
 <div class=" logincss">
    <ul class="nav nav-tabs">
                   <li class="active"><a href="#login" data-toggle="tab"> Login </a></li>
@@ -25,7 +24,7 @@
                 <div class="input-group">
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-lock"></i></span>
-                  <input type ="password"  placeholder ="Enter Password" class="form-control" ng-model="pwd" id="pwd" pattern="[a-z]{3}" required>
+                  <input type ="password"  placeholder ="Enter Password" class="form-control" ng-model="pwd" id="pwd" required>
                 </div> <br>
                 <div  class="checkbox">
                   <label><input type="checkbox" checked> Remember me</label>
@@ -38,17 +37,22 @@
                 <div class="input-group">
                   <span class="input-group-addon">
                  <i class="glyphicon glyphicon-user"></i></span>
-                 <input type="text" class="form-control" placeholder="Enter User name" ng-model ="unameR" id ="uname1" pattern="[a-z]{3}" required>
+                 <input type="text" class="form-control" placeholder="Enter User name" ng-model ="unamer"  required>
                 </div> <br>
                 <div class="input-group">
                   <span class="input-group-addon">
                  <i class="glyphicon glyphicon-envelope"></i></span>
-                 <input type="text" class="form-control" placeholder="Enter your Email Id"  ng-model ="emailR" id="email1" pattern="[a-z]{3}" required>
+                 <input type="text" class="form-control" placeholder="Enter your Email Id"  ng-model ="emailr" id="email1" required>
                 </div> <br>
                 <div class="input-group">
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-lock"></i></span>
-                  <input type ="password"  placeholder ="Enter Password" class="form-control"  ng-model ="pwdR" id="pwd1"  pattern="[a-z]{3}" required>
+                  <input type ="password"  placeholder ="Enter Password" class="form-control"  ng-model ="pwdr" id="pwd1"  required>
+                </div> <br>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-lock"></i></span>
+                  <input type ="text"  placeholder ="Enter id" class="form-control"  ng-model ="idr" id="pwd1"   required>
                 </div> <br>
                  <button type="submit" class="btn btn-primary pull-right" ng-click="register()">Register</button>
               </div>
