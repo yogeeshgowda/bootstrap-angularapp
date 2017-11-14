@@ -1,0 +1,13 @@
+div.logincss {
+	max-width: 420px;
+    padding: 40px 38px 66px;
+    margin: 0 auto; 
+	margin-top:150px ; 
+	border-style: solid;
+}
+.carousel-inner > .item > img {
+  width:640px;
+  height:400px;
+  margin-top:55px;
+}
+

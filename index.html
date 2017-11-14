@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  {{ anusha }}
+<div class=" logincss">
+   <ul class="nav nav-tabs">
+                  <li class="active"><a href="#login" data-toggle="tab"> Login </a></li>
+                  <li><a href="#signup" data-toggle="tab"> Signup </a></li>
+               </ul><br>
+               <form class="form-horizontal" id="validateForm">
+              <div class="tab-content">
+                <div id="login" class="tab-pane fade in active">
+                <h2><center>Login</center></h2><hr>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                 <i class="glyphicon glyphicon-user"></i></span>
+                  <input type ="text"  placeholder ="Enter User Name" class="form-control" ng-model="uname" id="uname" required>
+                </div><br>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-lock"></i></span>
+                  <input type ="password"  placeholder ="Enter Password" class="form-control" ng-model="pwd" id="pwd" pattern="[a-z]{3}" required>
+                </div> <br>
+                <div  class="checkbox">
+                  <label><input type="checkbox" checked> Remember me</label>
+                  </div>
+                  <a href="#forgot" data-toggle="modal"><span></span> Forgot Password</a>
+                  <button class="btn btn-primary pull-right" ng-click="login()">Login</button>
+                    </div>
+              <div id="signup" class="tab-pane fade">
+                <h2><center>Sign Up</center></h2><hr>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                 <i class="glyphicon glyphicon-user"></i></span>
+                 <input type="text" class="form-control" placeholder="Enter User name" ng-model ="unameR" id ="uname1" pattern="[a-z]{3}" required>
+                </div> <br>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                 <i class="glyphicon glyphicon-envelope"></i></span>
+                 <input type="text" class="form-control" placeholder="Enter your Email Id"  ng-model ="emailR" id="email1" pattern="[a-z]{3}" required>
+                </div> <br>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-lock"></i></span>
+                  <input type ="password"  placeholder ="Enter Password" class="form-control"  ng-model ="pwdR" id="pwd1"  pattern="[a-z]{3}" required>
+                </div> <br>
+                 <button type="submit" class="btn btn-primary pull-right" ng-click="register()">Register</button>
+              </div>
+              </form>
+              <div class="modal fade" id="forgot">
+               <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Recover your Password</h4>
+                        </div>
+                               <div class="modal-body">
+                                  <div class="input-group">
+                               <span class="input-group-addon">
+                                  <i class="glyphicon glyphicon-envelope"></i></span>
+                                  <input type="text" class="form-control" placeholder="Enter your Email Id"  name ="email1" id="email1" pattern="[a-z]{3}" required>
+                                  </div> <br>
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                  <i class="glyphicon glyphicon-lock"></i></span>
+                                  <input type ="password"  placeholder ="Enter your new Password" class="form-control"  name ="pwd1" pattern="[a-z]{3}" id="pwd1"  required>
+                                  </div> <br>
+                           </div>
+                           <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                         <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+
+                        </div>
+                      </div>
+
+              </div>
+            </div>
+          </div>
+
+          <script src="bower_components/angular/angular.min.js"></script>
+          <script src="bower_components/angular-route/angular-route.min.js"></script>
+          <script src="bower_components/jquery/dist/jquery.min.js"></script>
+          <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+          <script src="public/script.js"></script>
+</body>
+</html>
